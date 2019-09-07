@@ -8,7 +8,11 @@ public class SignPost
 {
 	public override void Interact()
 	{
-		base.Interact();
+		DialogueSystem.Instance.AddNewDialogue(
+			"Sign",dialogue );
+
 		Debug.Log( "Interacting with sign post" );
 	}
+
+	public string[] dialogue;
 }
